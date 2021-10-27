@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="moneyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Calculadora Moneda</title>
+</head>
+<body ng-controller="MonedaController">
+    <header class="header">
+        <h1 class="header__title">Calculadora de Moneda</h1>
+    </header>
+    <section class="calculator">
+        <form class="form">
+            <label for="Money" class="form__label">Valor en pesos Colombianos</label>
+            <input id="money" name="money" type="number" class="form__input" placeholder="50000" ng-model="moneyInput">
+            <button class="btn" ng-click="converter()">Calcular</button>
+        </form>
+        <hr>
+        <p class="calculator__text"><span class="calculator__title">Dolares:</span>${{vDolar}}</p>
+        <p class="calculator__text"><span class="calculator__title">Euros:</span>${{vEuro}}</p>
+    </section>
+
+    <!-- Libreria de AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Libreria de Alertas -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Controllers -->
+    <script src="./monedaController.js"></script>
+</body>
+</html>
